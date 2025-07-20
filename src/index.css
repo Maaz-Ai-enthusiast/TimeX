@@ -2,57 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* TimeX Design System - Purple/Blue Theme with gradients and animations */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    /* Background & Surfaces */
+    --background: 252 100% 98%;
+    --surface: 0 0% 100%;
+    --surface-elevated: 252 100% 99%;
+    
+    /* Text Colors */
+    --foreground: 224 71% 4%;
+    --text-secondary: 215 16% 47%;
+    --text-muted: 215 16% 65%;
+    
+    /* Brand Colors - Purple/Blue Gradient Theme */
+    --primary: 252 95% 85%;
+    --primary-hover: 252 95% 80%;
+    --primary-foreground: 224 71% 4%;
+    
+    --accent: 262 83% 58%;
+    --accent-hover: 262 83% 53%;
+    --accent-foreground: 0 0% 100%;
+    
+    --brand: 252 95% 85%;
+    --brand-secondary: 262 83% 58%;
+    --brand-tertiary: 234 89% 74%;
+    
+    /* UI Elements */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 224 71% 4%;
+    --card-border: 220 13% 91%;
+    
+    --button-primary: 262 83% 58%;
+    --button-primary-hover: 262 83% 53%;
+    --button-primary-foreground: 0 0% 100%;
+    
+    --button-secondary: 252 100% 98%;
+    --button-secondary-hover: 252 100% 95%;
+    --button-secondary-foreground: 224 71% 4%;
+    
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262 83% 58%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(252 95% 85%), hsl(262 83% 58%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(252 100% 99%));
+    --gradient-hero: linear-gradient(135deg, hsl(252 100% 98%) 0%, hsl(252 95% 95%) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 2px 8px hsl(262 83% 58% / 0.08);
+    --shadow-medium: 0 4px 16px hsl(262 83% 58% / 0.12);
+    --shadow-large: 0 8px 32px hsl(262 83% 58% / 0.16);
+    --shadow-glow: 0 0 40px hsl(262 83% 58% / 0.15);
+    
+    /* Component Specific */
+    --secondary: 252 100% 98%;
+    --secondary-foreground: 224 71% 4%;
+    --muted: 220 13% 91%;
+    --muted-foreground: 215 16% 47%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --popover-foreground: 224 71% 4%;
+    
+    --radius: 0.75rem;
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   .dark {
@@ -100,6 +119,74 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Gradient Backgrounds */
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  /* Custom Shadows */
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .shadow-large {
+    box-shadow: var(--shadow-large);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Smooth Transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+  
+  /* Interactive Elements */
+  .hover-lift {
+    @apply transition-smooth hover:shadow-medium hover:-translate-y-1;
+  }
+  
+  .hover-glow {
+    @apply transition-smooth hover:shadow-glow;
+  }
+  
+  /* Button Variants */
+  .btn-primary {
+    @apply bg-accent text-accent-foreground hover:bg-accent-hover px-6 py-3 rounded-lg font-medium transition-smooth hover:shadow-medium;
+  }
+  
+  .btn-secondary {
+    @apply bg-button-secondary text-button-secondary-foreground hover:bg-button-secondary-hover px-6 py-3 rounded-lg font-medium transition-smooth border border-border;
+  }
+  
+  /* Feature Cards */
+  .feature-card {
+    @apply bg-gradient-card rounded-2xl p-8 hover-lift border border-card-border;
   }
 }

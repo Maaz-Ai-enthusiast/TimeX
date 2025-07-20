@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -19,18 +20,18 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8" data-aos="fade-down" data-aos-delay="100">
-            <a href="#product" className="text-text-secondary hover:text-foreground transition-smooth">
+            <Link to="/product" className="text-text-secondary hover:text-foreground transition-smooth">
               Product
-            </a>
-            <a href="#service" className="text-text-secondary hover:text-foreground transition-smooth">
+            </Link>
+            <Link to="/service" className="text-text-secondary hover:text-foreground transition-smooth">
               Service
-            </a>
-            <a href="#resources" className="text-text-secondary hover:text-foreground transition-smooth">
+            </Link>
+            <Link to="/resources" className="text-text-secondary hover:text-foreground transition-smooth">
               Resources
-            </a>
-            <a href="#customers" className="text-text-secondary hover:text-foreground transition-smooth">
+            </Link>
+            <Link to="/customers" className="text-text-secondary hover:text-foreground transition-smooth">
               Customers
-            </a>
+            </Link>
           </nav>
 
           {/* Desktop CTA */}
@@ -53,18 +54,18 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border">
             <nav className="flex flex-col space-y-4 mt-4">
-              <a href="#product" className="text-text-secondary hover:text-foreground transition-smooth">
+              <Link to="/product" className="text-text-secondary hover:text-foreground transition-smooth">
                 Product
-              </a>
-              <a href="#service" className="text-text-secondary hover:text-foreground transition-smooth">
+              </Link>
+              <Link to="/service" className="text-text-secondary hover:text-foreground transition-smooth">
                 Service
-              </a>
-              <a href="#resources" className="text-text-secondary hover:text-foreground transition-smooth">
+              </Link>
+              <Link to="/resources" className="text-text-secondary hover:text-foreground transition-smooth">
                 Resources
-              </a>
-              <a href="#customers" className="text-text-secondary hover:text-foreground transition-smooth">
+              </Link>
+              <Link to="/customers" className="text-text-secondary hover:text-foreground transition-smooth">
                 Customers
-              </a>
+              </Link>
               <Button className="btn-primary w-full mt-4">
                 Start free
               </Button>

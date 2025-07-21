@@ -1,73 +1,109 @@
-# Welcome to your Lovable project
+# ⏰ TimesX(React.js)
 
-## Project info
+**TimeX** is a modern, responsive AI chat frontend built using **React.js** and **Tailwind CSS**. It includes a sidebar for chat history, a chat window, input box, and model selector — all optimized for usability and speed.
 
-**URL**: https://lovable.dev/projects/03f0ad30-e1a3-4d7e-a052-4f04cd789619
+🔗 **Live Demo:** [https://timesx.netlify.app/](https://timesx.netlify.app/)  
+📂 **GitHub Repo:** [https://github.com/Maaz-Ai-enthusiast/TimeX](https://github.com/Maaz-Ai-enthusiast/TimeX)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 📸 UI Preview
 
-**Use Lovable**
+![TimeX UI Preview](public/preview.png)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/03f0ad30-e1a3-4d7e-a052-4f04cd789619) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Tech Stack
 
-**Use your preferred IDE**
+- **React.js** – UI library
+- **Tailwind CSS** – Utility-first CSS for responsive styling
+- **React Markdown** – For rendering AI-generated responses
+- **React Icons** – For minimal iconography
+- **Fetch API** – For frontend communication with custom backend APIs
+- **Context API** – For state sharing (if used)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## ✨ UI Features
 
-Follow these steps:
+- ✅ Clean and intuitive layout
+- ✅ Sidebar with chat titles
+- ✅ Chat window with markdown support
+- ✅ Input box with enter/send handling
+- ✅ Dropdown to choose GPT models
+- ✅ Loading states and scroll-to-bottom behavior
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 📁 Folder Structure
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+/public
+  preview.png            – App preview image
+/src
+  /components
+    ChatSidebar.jsx      – Sidebar UI for all chats
+    ChatWindow.jsx       – Displays messages
+    ChatInput.jsx        – Message input field
+    ModelSelector.jsx    – Dropdown to pick OpenAI model
+  /styles
+    index.css            – TailwindCSS config
+  App.jsx                – Main UI logic
+  index.js               – ReactDOM entry point
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## ⚙️ Getting Started
 
-**Use GitHub Codespaces**
+1. **Clone the repo**
+```bash
+git clone https://github.com/Maaz-Ai-enthusiast/TimeX.git
+cd TimeX
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+2. **Install dependencies**
+```bash
+npm install
+```
 
-## What technologies are used for this project?
+3. **Start development server**
+```bash
+npm start
+```
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📦 Used Libraries
 
-## How can I deploy this project?
+```json
+{
+  "react": "^18.x",
+  "react-dom": "^18.x",
+  "react-markdown": "^9.x",
+  "react-icons": "^5.x",
+  "tailwindcss": "^3.x"
+}
+```
 
-Simply open [Lovable](https://lovable.dev/projects/03f0ad30-e1a3-4d7e-a052-4f04cd789619) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 📌 Customization
 
-Yes, you can!
+You can easily customize:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- Colors and layout via `tailwind.config.js`
+- Model list in the dropdown
+- Chat bubble styles
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+---
+
+## 🙌 Credits
+
+Made with 💻 by [Maaz Irfan](https://github.com/Maaz-Ai-enthusiast)  
+UI inspired by modern AI tools for clarity and focus.
+
+---
+
+## 🟣 That’s it from my side for today 😊 See you in the next post — InshaAllah.  
+**Solving real business problems with AI powered web and mobile apps**

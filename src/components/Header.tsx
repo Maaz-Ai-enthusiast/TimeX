@@ -15,7 +15,7 @@ const Header = () => {
             <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
               <span className="text-accent-foreground font-bold text-lg">T</span>
             </div>
-            <span className="text-2xl font-bold text-foreground">TimeX</span>
+            <Link to="/" className="text-2xl font-bold text-foreground">TimeX</Link>
           </div>
 
           {/* Desktop Navigation */}
